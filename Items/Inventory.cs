@@ -9,28 +9,13 @@ namespace RogueLike.Items
         public Inventory(int cap)
         {
             Cap = cap;
-            NextSlot = 1;
+            _innerList.Capacity = cap;
         }
-
-        //private Item[] _items;
-
-        //public Item[] Items
-        //{
-        //    get
-        //    {
-        //        return _items;
-        //    }
-        //    private set
-        //    {
-        //        _items = value;
-        //    } 
-        //}
 
         private List<Item> _innerList = new List<Item>();
 
         private int Cap { get; set; }
-        private int NextSlot { get; set; }
-        public int Count { get; }
+        public int Count { get { return _innerList.Count; } }
         public bool IsReadOnly { get; }
 
         public Item this[int index]
@@ -46,6 +31,7 @@ namespace RogueLike.Items
 
         public void RemoveAt(int index)
         {
+            if (index > Cap) return;
             _innerList.RemoveAt(index);
         }
 
