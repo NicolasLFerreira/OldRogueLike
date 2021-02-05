@@ -1,29 +1,94 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace RogueLike.Items
 {
-    class Inventory
+    class Inventory : IList<Item>
     {
-        private Item[] Items = new Item[9];
-        private int NextSlot { get; set; }
-
-
-        // Adds an Item to the Items array. Returns true if the action is succesful, and false if not
-        public bool AddItem(Item item)
+        public Inventory(int cap)
         {
-            if (NextSlot < 9) Items[NextSlot++] = item;
-            else return false;
-            return true;
+            Cap = cap;
+            NextSlot = 1;
         }
 
-        public bool GetItem(int index)
+        //private Item[] _items;
+
+        //public Item[] Items
+        //{
+        //    get
+        //    {
+        //        return _items;
+        //    }
+        //    private set
+        //    {
+        //        _items = value;
+        //    } 
+        //}
+
+        private List<Item> _innerList = new List<Item>();
+
+        private int Cap { get; set; }
+        private int NextSlot { get; set; }
+        public int Count { get; }
+        public bool IsReadOnly { get; }
+
+        public Item this[int index]
         {
-            if (index > 9 || index < 1 || Items[index] != null) return false;
+            get { return _innerList[index]; }
+            set { _innerList[index] = value; }
+        }
+
+        public int IndexOf(Item item)
+        {
+            return _innerList.IndexOf(item);
+        }
+
+        public void RemoveAt(int index)
+        {
+            _innerList.RemoveAt(index);
+        }
+
+        public void Add(Item item)
+        {
+            _innerList.Add(item);
+        }
+
+        // Not implemented
+
+        public void Insert(int index, Item item)
+        {
+            throw new NotSupportedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(Item item)
+        {
+            throw new NotSupportedException();
+        }
+
+        public void CopyTo(Item[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(Item item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator<Item> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

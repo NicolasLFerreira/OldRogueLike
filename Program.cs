@@ -14,9 +14,10 @@ namespace RogueLike
     {
         static void Main()
         {
-            Inventory inv = new Inventory();
+            Inventory a = new Inventory(9);
 
-            inv.AddItem(new Item("as"));
+            a.
+
             Console.ReadKey();
         }
     }
