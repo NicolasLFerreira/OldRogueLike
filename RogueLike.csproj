@@ -43,11 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Character.cs" />
-    <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\MapElement.cs" />
-    <Compile Include="Entities\Player.cs" />
-    <Compile Include="Entities\Structure.cs" />
+    <Compile Include="Entities\MapEntity.cs" />
+    <Compile Include="Entities\MapStructure.cs" />
     <Compile Include="Items\Inventory.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Map\Map.cs" />

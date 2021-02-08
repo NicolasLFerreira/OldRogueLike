@@ -6,22 +6,40 @@ namespace RogueLike.Items
 {
     class Inventory : IList<Item>
     {
+        /*
+         * The inventory class is used in every situation where one or multiple items need to be stored for future use.
+         */
+
+        // Creates a list of Items with Cap size
         public Inventory(int cap)
         {
             Cap = cap;
-            _innerList.Capacity = cap;
+            _innerList = new List<Item>(cap);
         }
 
-        private List<Item> _innerList = new List<Item>();
+        private List<Item> _innerList { get; set; } // Contains the base list methods
 
-        private int Cap { get; set; }
-        public int Count { get { return _innerList.Count; } }
-        public bool IsReadOnly { get; }
+        private int Cap { get; set; } // Size of the Inventory
+        public int Count { get { return _innerList.Count; } } // Returns the amount of items on the Inventory
 
+        // Indexer of the Inventory
         public Item this[int index]
         {
-            get { return _innerList[index]; }
-            set { _innerList[index] = value; }
+            get
+            {
+                // Checks to see if the index is within the range of existing items
+                if (index < 0 || index > Count - 1) return new Item("", -1);
+                return _innerList[index];
+            }
+            set
+            {
+                _innerList[index] = value;
+            }
+        }
+
+        public void Add(Item item)
+        {
+            _innerList.Add(item);
         }
 
         public int IndexOf(Item item)
@@ -35,12 +53,9 @@ namespace RogueLike.Items
             _innerList.RemoveAt(index);
         }
 
-        public void Add(Item item)
-        {
-            _innerList.Add(item);
-        }
-
         // Not implemented
+
+        public bool IsReadOnly { get; }
 
         public void Insert(int index, Item item)
         {
