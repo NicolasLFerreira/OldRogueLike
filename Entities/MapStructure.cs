@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace RogueLike.Entities
 {
-    class Structure
+    class MapStructure : MapElement
     {
+        public MapStructure(string name, int id, char icon) : base(name, id, icon)
+        {
 
+        }
     }
 }
