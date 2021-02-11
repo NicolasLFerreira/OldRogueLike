@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Skills.cs" />
     <Compile Include="Entities\MapElement.cs" />
     <Compile Include="Entities\MapEntity.cs" />
     <Compile Include="Entities\MapStructure.cs" />
