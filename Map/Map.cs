@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using RogueLike.Entities;
+using RogueLike.Elements;
 
 namespace RogueLike.Map
 {
