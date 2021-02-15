@@ -11,7 +11,5 @@ namespace RogueLike.Map
     class Map
     {
         private MapElement[,] Elements { get; set; }
-
-
     }
 }

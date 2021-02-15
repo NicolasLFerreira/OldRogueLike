@@ -12,9 +12,6 @@ namespace RogueLike.Skills.Offensive
     {
         public BasicAttack(MapEntity user, int cost) : base(user, cost) { }
 
-        public MapEntity User { get; set; }
-        public int Cost { get; set; }
-
         public override void Cast(MapEntity target) => target.ReceiveDamage(User.Atk - target.Defense);
     }
 }
