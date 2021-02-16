@@ -10,10 +10,9 @@ namespace RogueLike.Skills
 {
     class BaseSkill
     {
-        public BaseSkill(MapEntity user, int cost) // Sets the caster and cost
+        public BaseSkill(MapEntity user) // Sets the caster and cost
         {
             User = user;
-            Cost = cost;
         }
 
         public MapEntity User { get; set; }

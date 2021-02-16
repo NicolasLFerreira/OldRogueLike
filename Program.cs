@@ -15,7 +15,7 @@ namespace RogueLike
     {
         static void Main()
         {
-            Inventory a = new Inventory(9)
+            BaseInventory a = new BaseInventory(9)
             {
                 new Item("Dragon Slayer", 23),
                 new Item("Dark sword", 23),

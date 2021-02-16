@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace RogueLike.Items
 {
-    class Inventory : IList<Item>
+    class BaseInventory : IList<Item>
     {
         /*
          * The inventory class is used in every situation where one or multiple items need to be stored for future use.
          */
 
         // Creates a list of Items with Cap size
-        public Inventory(int cap)
+        public BaseInventory(int cap)
         {
             Cap = cap;
             _innerList = new List<Item>(cap);
