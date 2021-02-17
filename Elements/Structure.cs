@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RogueLike.Elements
 {
-    class MapStructure : MapElement
+    class Structure : MapElement
     {
-        public MapStructure(string name, int id, char icon) : base(name, id, icon)
+        public Structure(string name, int id, char icon) : base(name, id, icon)
         {
 
         }
