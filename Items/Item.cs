@@ -8,13 +8,12 @@ namespace RogueLike.Items
 {
     class Item
     {
-        public Item(string name, int id)
+        public Item(string name)
         {
             Name = name;
-            Id = id;
         }
 
-        public string Name { get; set; }
-        public int Id { get; set; }
+        public string Name { get; set; } // Name to be displayed
+        public int Id { get; set; } // Type of the item (weapon, armor, etc)
     }
 }
