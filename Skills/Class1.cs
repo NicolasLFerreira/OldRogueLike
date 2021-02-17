@@ -8,15 +8,16 @@ using RogueLike.Elements;
 
 namespace RogueLike.Skills
 {
-    class Heal : BaseSkill
+    class Meteor : BaseSkill
     {
-        public Heal(Entity user) : base(user) => Cost = 5;
+        public Meteor(Entity user) : base(user) => Cost = 7;
 
         public override void Action(Entity target)
         {
-            if (User.Hp < User.Vitality * 5) User.Hp += User.Vitality;
+            if (target.Mp > 0) target.Mp -= 2;
+            if (target.Mp < 0) target.Mp = 0;
 
-            if (User.Hp > User.Vitality * 5) User.Hp = User.Vitality;
+            target.Hp -= (User.Atk * User.Def / 2) - User.Defense;
         }
     }
 }

@@ -10,15 +10,12 @@ namespace RogueLike.Skills
 {
     class BaseSkill
     {
-        public BaseSkill(MapEntity user) // Sets the caster and cost
-        {
-            User = user;
-        }
+        public BaseSkill(Entity user) => User = user; // Sets the caster and cost
 
-        public MapEntity User { get; set; }
+        public Entity User { get; set; }
         public int Cost { get; set; }
 
-        virtual public void Cast(MapEntity target)
+        virtual public void Action(Entity target)
         {
             throw new NotImplementedException();
         }
