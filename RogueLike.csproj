@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\Weapon.cs" />
     <Compile Include="Map\Map.cs" />
     <Compile Include="Skills\BaseSkill.cs" />
     <Compile Include="Elements\MapElement.cs" />
-    <Compile Include="Elements\MapEntity.cs" />
-    <Compile Include="Elements\MapStructure.cs" />
-    <Compile Include="Items\BaseInventory.cs" />
+    <Compile Include="Elements\Entity.cs" />
+    <Compile Include="Elements\Structure.cs" />
+    <Compile Include="Items\Inventory.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skills\Class1.cs" />
     <Compile Include="Skills\Heal.cs" />
-    <Compile Include="Skills\Punch.cs" />
+    <Compile Include="Skills\FireBall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
