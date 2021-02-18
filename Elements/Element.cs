@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace RogueLike.Elements
 {
-    class MapElement
+    public class Element
     {
-        public MapElement(string name, int id, char icon)
+        public Element(string name, char icon)
         {
             Name = name;
-            Id = id;
             Icon = icon;
+
         }
 
         public string Name { get; set; }
-        public int Id { get; set; }
         public char Icon { get; set; }
+        public int Type { get; set; }
     }
 }
