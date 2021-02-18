@@ -15,16 +15,15 @@ namespace RogueLike
     {
         static void Main()
         {
-            Inventory a = new Inventory(9)
-            {
-                new Item("Dragon Slayer", 23),
-                new Item("Dark sword", 23),
-                new Item("Mjolnir", 23),
-                new Item("Godly glaive", 23)
-            };
+            Entity a = new Entity("person", 0, '@', 10, 10, 10, 10);
 
-            Console.WriteLine(a.Count);
-            Console.WriteLine(a[5].Name);
+            Inventory b = new Inventory(9);
+
+            b.Add(new Item("sword"));
+
+            Console.WriteLine(b[0].Name);
+
+            Console.WriteLine(Console.ReadKey().Key);
 
             Console.ReadKey();
         }

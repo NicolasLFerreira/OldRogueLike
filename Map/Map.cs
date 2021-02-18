@@ -10,6 +10,6 @@ namespace RogueLike.Map
 {
     class Map
     {
-        private MapElement[,] Elements { get; set; }
+        private Element[,] Elements { get; set; }
     }
 }
