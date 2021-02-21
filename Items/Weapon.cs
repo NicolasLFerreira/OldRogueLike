@@ -8,6 +8,9 @@ namespace RogueLike.Items
 {
     class Weapon : Item
     {
-        public Weapon(string name, sbyte type) : base(name, type) { }
+        public Weapon(string name, sbyte type, string icon) : base(name, type, icon)
+        {
+
+        }
     }
 }

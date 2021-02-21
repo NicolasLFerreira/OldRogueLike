@@ -12,11 +12,9 @@ namespace RogueLike.Elements
         {
             Name = name;
             Icon = icon;
-
         }
 
         public string Name { get; set; }
         public char Icon { get; set; }
-        public int Type { get; set; }
     }
 }

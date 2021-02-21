@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using RogueLike.Elements;
 using RogueLike.Items;
-using RogueLike.Skills;
+using RogueLike.Graphics;
 
 namespace RogueLike
 {
@@ -15,15 +15,13 @@ namespace RogueLike
     {
         static void Main()
         {
-            Entity a = new Entity("person", 0, '@', 10, 10, 10, 10);
+            Inventory a = new Inventory(9)
+            {
+                new Item("Steel Sword", 0, "-|==>")
+            };
 
-            Inventory b = new Inventory(9);
-
-            b.Add(new Item("sword"));
-
-            Console.WriteLine(b[0].Name);
-
-            Console.WriteLine(Console.ReadKey().Key);
+            PrintInventory i = new PrintInventory(a);
+            i.PrintContent();
 
             Console.ReadKey();
         }

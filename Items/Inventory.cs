@@ -19,7 +19,7 @@ namespace RogueLike.Items
 
         private List<Item> _innerList { get; set; } // Contains the base list methods
 
-        private int Cap { get; set; } // Size of the Inventory
+        public int Cap { get; private set; } // Size of the Inventory
         public int Count { get { return _innerList.Count; } } // Returns the amount of items on the Inventory
 
         // Indexer of the Inventory
@@ -28,7 +28,7 @@ namespace RogueLike.Items
             get
             {
                 // Checks to see if the index is within the range of existing items
-                if (index < 0 || index > Count - 1) return new Item("", -1);
+                if (index < 0 || index > Count - 1) return new Item("", -1, "");
                 return _innerList[index];
             }
             set
