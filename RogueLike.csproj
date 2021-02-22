@@ -50,6 +50,7 @@
     <Compile Include="Items\EquippableItems\Armor.cs" />
     <Compile Include="Items\EquippableItems\Equipment.cs" />
     <Compile Include="Items\EquippableItems\Weapon.cs" />
+    <Compile Include="Items\MiscItems\Misc.cs" />
     <Compile Include="Map\Map.cs" />
     <Compile Include="Items\Inventory.cs" />
     <Compile Include="Items\Item.cs" />
@@ -60,8 +61,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\MiscItems\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

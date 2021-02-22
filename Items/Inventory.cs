@@ -28,7 +28,7 @@ namespace RogueLike.Items
             get
             {
                 // Checks to see if the index is within the range of existing items
-                if (index < 0 || index > Count - 1) return new Item(""\);
+                if (index < 0 || index > Count - 1) return new Item("");
                 return _innerList[index];
             }
             set
