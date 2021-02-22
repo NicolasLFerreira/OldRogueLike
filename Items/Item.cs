@@ -8,11 +8,9 @@ namespace RogueLike.Items
 {
     class Item
     {
-        public Item(string name, sbyte type, string icon)
+        public Item(string name)
         {
             Name = name;
-            Type = type;
-            Icon = icon;
         }
 
         public string Name { get; protected set; }

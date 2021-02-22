@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace RogueLike.Items
 {
-    class Weapon : Item
+    class Equipment : Item
     {
-        public Weapon(string name, sbyte type, string icon) : base(name, type, icon)
+        public Equipment(string name, byte level) : base(name)
         {
-
+            Level = level;
         }
+        public byte Level { get; set; }
     }
 }
