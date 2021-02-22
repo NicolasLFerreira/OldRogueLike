@@ -13,8 +13,8 @@ namespace RogueLike.Items.EquippableItems
             Type = 1;
         }
 
-        public int Vitality { get; set; }
-        public int Defense { get; set; }
-        public int Mana { get; set; }
+        public int Vitality { get; protected set; }
+        public int Defense { get; protected set; }
+        public int Mana { get; protected set; }
     }
 }

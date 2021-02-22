@@ -12,6 +12,6 @@ namespace RogueLike.Items.EquippableItems
         {
             Level = level;
         }
-        public byte Level { get; set; }
+        public byte Level { get; protected set; }
     }
 }
