@@ -46,6 +46,8 @@
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Elements\Player.cs" />
     <Compile Include="Graphics\PrintInventory.cs" />
+    <Compile Include="Items\Accessory.cs" />
+    <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\Weapon.cs" />
     <Compile Include="Map\Map.cs" />
     <Compile Include="Items\Inventory.cs" />

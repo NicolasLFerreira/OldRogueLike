@@ -8,17 +8,18 @@ using RogueLike.Items;
 
 namespace RogueLike.Elements
 {
-    public abstract class Player : Element
+    class Player : Element
     {
         public Player(string name, char icon) : base(name, icon)
         {
-
+            Equipped = new Inventory(3);
+            Storage = new Inventory(9);
         }
 
         // Dependecies
 
-        private Inventory Equipped = new Inventory(3);
-        private Inventory Storage = new Inventory(9);
+        public Inventory Equipped { get; set; }
+        public Inventory Storage { get; set; }
 
         // Base stats
 

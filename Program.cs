@@ -15,13 +15,18 @@ namespace RogueLike
     {
         static void Main()
         {
-            Inventory a = new Inventory(9)
-            {
-                new Item("Steel Sword", 0, "-|==>")
-            };
+            Player n = new Player("Nicolas", '@');
 
-            PrintInventory i = new PrintInventory(a);
-            i.PrintContent();
+            n.Storage.Add(new Item("Sword"));
+            n.Storage.Add(new Item("Spear"));
+            n.Storage.Add(new Item("Hammer"));
+            n.Storage.Add(new Item("Staff"));
+
+            PrintInventory.PrintContent(n.Storage);
+
+            n.Storage.RemoveAt(0);
+
+            PrintInventory.PrintContent(n.Storage);
 
             Console.ReadKey();
         }
