@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RogueLike.Items
+namespace RogueLike.Items.EquippableItems
 {
     class Accessory : Equipment
     {

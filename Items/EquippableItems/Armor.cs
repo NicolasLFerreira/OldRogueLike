@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RogueLike.Items
+namespace RogueLike.Items.EquippableItems
 {
-    class Armor : Item
+    class Armor : Equipment
     {
         public Armor(string name, byte level) : base(name, level)
         {

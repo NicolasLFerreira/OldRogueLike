@@ -46,9 +46,10 @@
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Elements\Player.cs" />
     <Compile Include="Graphics\PrintInventory.cs" />
-    <Compile Include="Items\Accessory.cs" />
-    <Compile Include="Items\Armor.cs" />
-    <Compile Include="Items\Weapon.cs" />
+    <Compile Include="Items\EquippableItems\Accessory.cs" />
+    <Compile Include="Items\EquippableItems\Armor.cs" />
+    <Compile Include="Items\EquippableItems\Equipment.cs" />
+    <Compile Include="Items\EquippableItems\Weapon.cs" />
     <Compile Include="Map\Map.cs" />
     <Compile Include="Items\Inventory.cs" />
     <Compile Include="Items\Item.cs" />
@@ -59,6 +60,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Items\MiscItems\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
